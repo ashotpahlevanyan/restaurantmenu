@@ -1,0 +1,18 @@
+Restaurant application
+
+input: 
+    txt file with menu items
+    background images
+    main image
+    special occasion images depending on time of the day
+    celebration images
+
+output:
+    Autostart in windows 7 home premium
+    self extracting installer with all dependencies in it
+    full screen mode presentation show - slide show
+    
+    
+    
+
+

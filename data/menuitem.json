@@ -1,0 +1,42 @@
+{
+	[
+		{
+			"title": "Smorgasart",
+			"subtitle": "pa brod",
+			"price": "55",
+			"subtypes" :[
+				{
+					"name":"classik",
+					"description":"",
+					"price": 89
+				},
+				{
+					"name":"kalkon",
+					"description":"chilli",
+					"price": 49.0
+				}
+			]
+		},
+		{
+			"title": "Smorgasart",
+			"subtitle": "pa brod",
+			"price": "55",
+			"subtypes" :[
+				{
+					"name":"classik",
+					"description":"",
+					"price": 89
+				},
+				{
+					"name":"kalkon",
+					"description":"chilli",
+					"price": 49.0
+				}
+			]
+		}
+	]
+	"background":"images/bg.jpg",
+	"hours": {
+
+	}
+}

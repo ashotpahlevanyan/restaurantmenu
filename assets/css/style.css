@@ -1,0 +1,87 @@
+body {
+  position: relative;
+  background: url(../images/bg.jpg);
+  background-repeat: repeat-x repeat-y;
+}
+
+.imgContainer {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.imgContainer .bgImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  z-index: 10;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 500;
+}
+
+.container.myCarousel {
+  width: auto;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.container.myCarousel .carousel-inner .item {
+  background-repeat: repeat-x repeat-y;
+  width: 100%;
+  position: relative !important;
+}
+
+.title {
+  padding: 0 15px;
+  font-style: italic;
+  font-style: 25px;
+}
+
+.itemsList {
+  display: block;
+  list-style: none;
+  font-size: 0;
+  padding: 5px 15px;
+}
+.itemsList li {
+  font-size: 18px;
+  display: block;
+}
+.itemsList li span {
+  display: block;
+  color: black;
+  display: inline-block;
+  vertical-align: top;
+  font-style: italic;
+  margin-left: 3%;
+}
+.itemsList li span:first-child {
+  margin-left: 0;
+}
+.itemsList li .name {
+  width: 30%;
+}
+.itemsList li .description {
+  width: 50%;
+}
+.itemsList li .price {
+  width: 10%;
+  text-align: right;
+}
+.itemsList li .price:after {
+  content: ":-";
+}
+
+/*# sourceMappingURL=style.css.map */

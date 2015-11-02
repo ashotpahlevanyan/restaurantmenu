@@ -1,0 +1,19 @@
+{
+  "name": "restaurantmenu",
+  "version": "0.0.2",
+  "homepage": "https://github.com/ashotpahlevanyan/restaurantmenu",
+  "authors": [
+    "Ashot Pahlevanyan <ashotpahlevanyan@gmail.com>"
+  ],
+  "description": "menu autorunner",
+  "main": "index.html",
+  "keywords": [
+    "menu",
+    "restaurant"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "moment": "~2.10.6",
+    "moment-range": "~2.0.3"
+  }
+}

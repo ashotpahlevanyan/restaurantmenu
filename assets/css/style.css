@@ -4,12 +4,27 @@ body {
   background-repeat: repeat-x repeat-y;
 }
 
+.menus {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  list-style: none;
+}
+.menus li {
+  display: block;
+}
+.menus * {
+  color: white !important;
+}
+
 .imgContainer {
   position: relative;
   top: 0;
+  right: 0;
   bottom: 0;
   left: 0;
-  right: 0;
 }
 .imgContainer .bgImage {
   display: block;
@@ -18,29 +33,14 @@ body {
   z-index: 10;
 }
 
-.menu {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 500;
-}
-
 .container.myCarousel {
   width: auto;
   margin: 0;
   padding: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
 .container.myCarousel .carousel-inner .item {
   background-repeat: repeat-x repeat-y;
   width: 100%;
-  position: relative !important;
 }
 
 .title {

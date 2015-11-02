@@ -1,4 +1,4 @@
-@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+@mixin position($position: absolute, $top: auto, $right: auto, $bottom: auto, $left: auto) {
 	position: $position;
 	top: $top;
 	right: $right;
@@ -13,14 +13,21 @@ body {
 	background-repeat: repeat-x repeat-y;
 }
 
+.menus {
+	@include position(absolute, 0,0,0,0);
+	list-style: none;
+	li {
+		display: block;
+	}
+	* {
+		color: white !important;
+	}
+}
+
+///////// OK Part above
 .imgContainer {
-	position: relative;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
+	@include position(relative, 0, 0, 0, 0);
 	.bgImage {
-		//@include position(absolute, 0, 0, 0, 0);
 		display: block;
 		width: 100%;
 		height: auto;
@@ -29,62 +36,35 @@ body {
 }
 
 .menu {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 500;
+	// position: absolute;
+	// top: 0;
+	// left: 0;
+	// right: 0;
+	// bottom: 0;
+	// z-index: 500;
 }
 //<img alt="img" src="http://dummyimage.com/1200x1800/a49bd5/9bd5a4">
 //<img alt="img" src="http://dummyimage.com/1200x1800/b49da5/9bd5a4">
 //<img alt="img" src="http://dummyimage.com/1200x1800/a4e5d5/9bd5a4">
-.container {
-	&.myCarousel {
-		width: auto;
-		margin: 0;
-		padding: 0;
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		.carousel-inner {
-			
-			.item {
-				//background: url(../images/bg1.jpg);
-				background-repeat: repeat-x repeat-y;
-				width: 100%;
-				
-				position: relative !important;
-				//height: 100%;
-				//height: 100%;
-
-				// img {
-				// 	display: block;
-				// 	@include position(absolute);
-
-				// 	height: 100%;
-				// 	width: 100%;
-					
-				// }
-
-				// -webkit-transition: 0.3s ease-in-out left;
-				// transition: 0.3s ease-in-out left;
-				// -webkit-transition: 0.3s, ease-in-out, left;
-				// -moz-transition: .3s, ease-in-out, left;
-				// -o-transition: .3s, ease-in-out, left;
-				// transition: .3s, ease-in-out, left;
-
-			}
-		}
-	}
-}
+// FONTS
 //palatino, PT Serif Caption
 //adobe devangari
 //adobe hebrew
 //adobe gumuhi
 //arabic typesetting
+.container {
+	&.myCarousel {
+		width: auto;
+		margin: 0;
+		padding: 0;
+		.carousel-inner {
+			.item {
+				background-repeat: repeat-x repeat-y;
+				width: 100%;
+			}
+		}
+	}
+}
 
 .title {
 	padding: 0 15px;

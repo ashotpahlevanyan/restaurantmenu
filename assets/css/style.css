@@ -5,7 +5,7 @@ body {
 }
 
 .menus {
-  position: absolute;
+  position: relative;
   top: 0;
   right: 0;
   bottom: 0;
@@ -41,6 +41,13 @@ body {
 .container.myCarousel .carousel-inner .item {
   background-repeat: repeat-x repeat-y;
   width: 100%;
+}
+.container.myCarousel .carousel-inner .item.withBG .menus {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .title {

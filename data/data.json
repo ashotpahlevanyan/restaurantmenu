@@ -1,156 +1,74 @@
-[
-
-	{
-		"background" : "cups.jpg",
-		"startDate" : "2015-11-02",
-		"endDate" : "2015-11-18",
-		"startTime" : "10:15:35",
-		"endTime" : "12:50:45",
-		"menulist" : [
-			{
-				"type" : "title",
-				"name" : "Varma Drycker",
-				"description" : "pa vanilj",
-				"price" : "26:-"
-			},
-			{
-				"type" : "item",
-				"name" : "Te Grona",
-				"description" : "pa hogung",
-				"price" : "15:-"
-			},
-			{
-				"type" : "item",
-				"name" : "Cappuccino Italiano",
-				"description" : "with latfree milk",
-				"price" : "25:-"
-			},
-			{
-				"type" : "item",
-				"name" : "Tea for genius",
-				"description" : "pa lemon och granat",
-				"price" : "45:-"
-			},
-			{
-				"type" : "item",
-				"name" : "Cafe Latte",
-				"description" : "pa marmelad och lemon",
-				"price" : "38:-"
-			},
-			{
-				"type" : "item",
-				"name" : "Cafe Glasse",
-				"description" : "pa choklad och banan glass",
-				"price" : "48:-"
-			},
-			{
-				"type" : "title",
-				"name" : "Cold Drycker",
-				"description" : "pa vanilj",
-				"price" : "26:-"
-			},
-			{
-				"type" : "item",
-				"name" : "Te Grona Cold",
-				"description" : "pa hogung",
-				"price" : "15:-"
-			},
-			{
-				"type" : "item",
-				"name" : "Fanta, Cola, Pepsi",
-				"description" : "0.5l",
-				"price" : "25:-"
-			},
-			{
-				"type" : "item",
-				"name" : "Orange Juice",
-				"description" : "ny pressat orange",
-				"price" : "36:-"
-			},
-			{
-				"type" : "item",
-				"name" : "Halon Juice",
-				"description" : "pa small ice and lime",
-				"price" : "19:-"
-			},
-			{
-				"type" : "item",
-				"name" : "Nescafe Ice",
-				"description" : "pa choklad",
-				"price" : "42:-"
-			},
-			{
-				"type" : "title",
-				"name" : "Hamburgers",
-				"description" : "pa vanilj",
-				"price" : "26:-"
-			},
-			{
-				"type" : "item",
-				"name" : "Te Grona",
-				"description" : "pa hogung",
-				"price" : "15:-"
-			},
-			{
-				"type" : "item",
-				"name" : "Cappuccino Italiano",
-				"description" : "with latfree milk",
-				"price" : "25:-"
-			},
-			{
-				"type" : "item",
-				"name" : "Tea for genius",
-				"description" : "pa lemon och granat",
-				"price" : "45:-"
-			},
-			{
-				"type" : "item",
-				"name" : "Cafe Latte",
-				"description" : "pa marmelad och lemon",
-				"price" : "38:-"
-			},
-			{
-				"type" : "item",
-				"name" : "Cafe Glasse",
-				"description" : "pa choklad och banan glass",
-				"price" : "48:-"
-			},
-			{
-				"type" : "title",
-				"name" : "Salads",
-				"description" : "pa vanilj",
-				"price" : "26:-"
-			},
-			{
-				"type" : "item",
-				"name" : "Te Grona Cold",
-				"description" : "pa hogung",
-				"price" : "15:-"
-			},
-			{
-				"type" : "item",
-				"name" : "Fanta, Cola, Pepsi",
-				"description" : "0.5l",
-				"price" : "25:-"
-			},
-			{
-				"type" : "item",
-				"name" : "Orange Juice",
-				"description" : "ny pressat orange",
-				"price" : "36:-"
-			},
-			{
-				"type" : "item",
-				"name" : "Halon Juice",
-				"description" : "pa small ice and lime",
-				"price" : "19:-"
-			},
-			{
-				"type" : "item",
-				"name" : "Nescafe Ice",
-				"description" : "pa choklad",
-				"price" : "42:-"
-			}
-		]
-	}
-]
+{
+	"playLength": "5000",
+	"menus" : [
+		{
+			"background" : "cups.jpg",
+			"startDate" : "2015-11-02",
+			"endDate" : "2015-11-18",
+			"startTime" : "10:15:35",
+			"endTime" : "19:50:45",
+			"menuList" : [
+				{
+					"type" : "title",
+					"name" : "Varma Drykker",
+					"description" : "pa vanilj",
+					"priceLarge" : "26:-", 
+					"priceSmall" : "18:-"
+				},
+				{
+					"type" : "item",
+					"name" : "Te Grona",
+					"description" : "pa hogung",
+					"priceLarge" :"35:-",
+					"priceSmall" :"20:-"
+				}
+			]
+		},
+		{
+			"background" : "water.jpg",
+			"startDate" : "2015-11-02",
+			"endDate" : "2015-11-18",
+			"startTime" : "10:15:35",
+			"endTime" : "19:50:45",
+			"menuList" : [
+				{
+					"type" : "title",
+					"name" : "Varma Drycker",
+					"description" : "pa vanilj",
+					"priceLarge" : "26:-", 
+					"priceSmall" : "18:-"
+				},
+				{
+					"type" : "item",
+					"name" : "Te Grona",
+					"description" : "pa hogung",
+					"priceLarge" :"35:-",
+					"priceSmall" :"20:-"
+				}
+			]
+		},
+		{
+			"background" : "",
+			"startDate" : "2015-11-02",
+			"endDate" : "2015-11-18",
+			"startTime" : "10:15:35",
+			"endTime" : "19:50:45",
+			"menuList" : [
+				{
+					"type" : "title",
+					"name" : "Varma Drykker",
+					"description" : "pa vanilj",
+					"priceLarge" : "26:-", 
+					"priceSmall" : "18:-"
+				},
+				{
+					"type" : "item",
+					"name" : "Te Grona",
+					"description" : "pa hogung",
+					"priceLarge" :"35:-",
+					"priceSmall" :"20:-"
+				}
+			]
+		}
+	]
+}

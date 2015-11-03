@@ -1,13 +1,16 @@
+
 [
-	//item, one page
+
 	{
-		"background":"cups.jpg",
-		"startTime":"2015-11-02:10:15:35",
-		"endTime":"2015-11-02:12:50:15",
+		"background" : "cups.jpg",
+		"startDate" : "2015-11-02",
+		"endDate" : "2015-11-18",
+		"startTime" : "10:15:35",
+		"endTime" : "12:50:45",
 		"menulist" : [
 			{
-				"type":"title",
-				"name":"Varma Drycker",
+				"type" : "title",
+				"name" : "Varma Drycker",
 				"description" : "pa vanilj",
 				"price" : "26:-"
 			},
@@ -15,7 +18,8 @@
 				"type" : "item",
 				"name" : "Te Grona",
 				"description" : "pa hogung",
-				"price" : "15:-"
+				"priceBig" :"35:-",
+				"priceSmall" :"15:-"
 			},
 			{
 				"type" : "item",

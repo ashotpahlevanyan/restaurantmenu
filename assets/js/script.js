@@ -1,5 +1,4 @@
 $(document).ready(function(){
-	//$("#simple-carousel").find(".item").emulateTransitionEnd(150);
 
 	//read data from json file asyncronously
 	var data = [];
@@ -7,86 +6,114 @@ $(document).ready(function(){
 		data = response;
 		console.log(response);
 		console.log( "success");
-		//after data is read successfully, initialize the tree and 
-		//bind handles
+		//after data is read successfully, initialize the carousel and 
+		//bind handles if there are some
 		init();
 	});	
 
+	var firstTime = true;
 	function createItem(obj)
-	{
+	{	
 		var $obj = null;
-		if (obj.name) {
-			// it's an object, so create the <li> and <a>
-			$objTitle = $('<div>').attr("class","title").text(obj.name);
-			$objId = $('<div>').attr("class","id").text(obj.id);
-			$objAnimal = $('<div>').attr("class","animal " + obj.genNumber);
-			$objAnimal.append($objTitle).append($objId);
+		if (obj.startDate != null) {
+			// it's a menu item, so create a div with class item
+
+			// Check if date and time are ok, otherwise it wouldn't be added to list
+			if(isDateTimeOK(obj.startDate, obj.endDate, obj.startTime, obj.endTime)) {
+				$obj = $('<div>').attr("class", "item");
+				if(firstTime) {
+					$obj.attr("class", $obj.attr("class") + " active");
+					firstTime = false;
+				}
+				if(obj.background != "") {
+					$obj.attr("class", $obj.attr("class") + " withBG");
+				}
+				//clear later
+				console.log($obj);
 			
-			$objSex = $('<span>').attr("class","sex fa fa-"+obj.sex);
-			$objPM = $('<span>').attr("class","plusminus fa fa-minus-square-o");
-			$objLink = $('<a>').attr("class","toggler").attr("href","#");
-			$objLink.append($objPM).append($objSex).append($objAnimal);
-			
-			$obj = $('<li>').attr("role", "presentation").attr("class", obj.genClass).append($objLink);
-			// if there are any children, append them recursively
-			if (obj.parents) {
-				$obj.append(createItem(obj.parents));
+				// If there is a background, make image container div and add image
+				if(obj.background != "") {
+					$imageContainer = $('<div>').attr("class", "imageContainer");
+					$img = $('<img>')
+					.attr("alt", "bg")
+					.attr("src", "assets/images/" + obj.background)
+					.attr("class", "bgImage");
+
+					$obj.append($imageContainer.append($img));
+				}
+
+				if(obj.menuList.length) {
+					$menus = $('<ul>').attr("class", "menus");
+					for(var i = 0, l = obj.menuList.length; i < l; i++) {
+						$menuItem = $('<li>');
+						if(obj.menuList[i].type == "title") {
+							$menuItem.attr("class", "title");
+						}
+						//fill menu Item information (<li>)
+						$name = $('<span>').attr("class", "name").append(obj.menuList[i].name);						
+						$desc = $('<span>').attr("class", "description").append(obj.menuList[i].description);						
+						$priceLarge = $('<span>').attr("class", "price large").append(obj.menuList[i].priceLarge);						
+						$priceSmall = $('<span>').attr("class", "price small").append(obj.menuList[i].priceSmall);
+						$menuItem.append($name).append($desc).append($priceLarge).append($priceSmall);						
+						//Add menu item to menus list (<ul>)
+						$menus.append($menuItem);
+					}
+					//Add menus to Item (slide)
+					$obj.append($menus);
+				}
 			}
 		}
-		else if (obj.length) {
+		else if (obj.playLength) {
 			// it's an array with some elements, so create the <ul>
-			$obj = $('<ul>').attr('class', "nav tree nav-pills nav-stacked");
-			for (var i = 0, l = obj.length; i < l; i++) {
-				$obj.append( createItem( obj[i] ) );
+			$obj = $('<div>').attr('data-example-id', "simple-carousel").attr("class", "bs-example");
+			$carousel = $('<div>').attr("data-ride","carousel")
+			.attr("class", "carousel slide")
+			.attr("data-interval", obj.playLength)
+			.attr("id","carousel-example-generic")
+			.attr("data-pause", "false");
+
+			$carouselInner = $('<div>')
+			.attr("class", "carousel-inner")
+			.attr("role", "listbox");
+
+			for (var i = 0, l = obj.menus.length; i < l; i++) {
+
+				$carouselInner.append( createItem( obj.menus[i] ) );
 			}
+			$obj.append($carousel.append($carouselInner));
 		}
-		// if it was an empty array or an object that doesn't have a title
+		// if it was an empty array or an object that doesn't have a playLength
 		// property, then it'll just return null;
 		return $obj;
 	}
 
 	
 	var init = function() {
-		// fill the tree from read data
+		// fill the carousel from read data
 
-		var start  = new Date(2012, 4, 1);
-		var end    = new Date(2012, 4, 23);
-		var lol    = new Date(2012, 4, 15);
-		var wat    = new Date(2012, 4, 27);
-		var range  = moment.range(start, end);
-		var range2 = moment.range(lol, wat);
-		 
-		console.log(range.contains(lol)); // true 
-		console.log(range.contains(wat)); // false 
-		console.log(moment("12:35:34", "HH:mm:ss").isValid());
+		//isDateTimeOK("2015-10-30", "2015-11-19", "09:36:24", "16:34:23");
 
-		isDateTimeOK("2015-10-30", "2015-11-19", "11:36:24", "16:34:23");
+		$('.myCarousel').append(createItem(data));
+    	$('.carousel').carousel('cycle');
 
-		$('.carousel-inner').append(createItem(data));
-
-		// // register click handle on .toggler elements 
-		// $(".toggler").on("click", function(event) {
-		// 	event.preventDefault();
-		// 	var plusminus = $(this).children(".plusminus");
-		// 	if(plusminus.hasClass("fa-plus-square-o")) {
-		// 		plusminus.removeClass("fa-plus-square-o").addClass("fa-minus-square-o");
-		// 	} else {
-		// 		plusminus.removeClass("fa-minus-square-o").addClass("fa-plus-square-o");
-		// 	}
-		// 	$(this).siblings("ul.tree").toggle(300);
-		// });
 	}
-	var parseDate = function(tdate) {
-		if(moment(tdate, "YY-mm-dd").isValid()) {
-			return ( moment(tdate, 'YY-mm-dd'));
+	var parseDate = function(date) {
+		tmp = new moment(date, "YYYY-MM-DD");
+		if(tmp.isValid()) {
+			// close later
+			console.log("isvalid date");
+			return tmp;
 		}
 		else {
 			return null;
 		}
 	}
 	var parseTime = function(time) {
-		if(moment(time, "HH:mm:ss").isValid()) {
-			return ( moment(time, 'HH:mm:ss'));
+		tmp = new moment(time, "HH:mm:ss");
+		if(tmp.isValid()) {
+			// close later
+			console.log("isvalid time");
+			return tmp;
 		} else {
 			return null;	
 		} 
@@ -96,25 +123,30 @@ $(document).ready(function(){
 		var dayIsOK = false;
 		var timeIsOK = false;
 
+		// close later
 		console.log(now);
 
 		var sDate = parseDate(startDate);
 		var eDate = parseDate(endDate);
 		var sTime = parseTime(startTime);
 		var eTime = parseTime(endTime);
+		// close later
 		console.log(sDate);
 		console.log(eDate);
 		console.log(sTime);
 		console.log(eTime);
 
 		// if start date or end date are incorrect, 
-		// then should chek for time and work
+		// then should check for time and work
+		
 		if (sDate == null || eDate == null) {
 			dayIsOK = true;
 		} else {
 			var rangeDate = moment.range(sDate, eDate);
 			if(rangeDate.contains(now)) {
 				dayIsOK = true;
+				
+				// close later
 				console.log("contains date");
 			}
 		}
@@ -127,13 +159,17 @@ $(document).ready(function(){
 			var rangeTime =  moment.range(sTime, eTime);
 			if(rangeTime.contains(now)) {
 				timeIsOK = true;
+				
+				// close later
 				console.log("contains time");
 			}
 		}
 
+		// close later
 		console.log(rangeDate);
 		console.log(rangeTime);
 		
+		// close later
 		console.log(dayIsOK  + " -- " + timeIsOK);
 		return (dayIsOK && timeIsOK);
 	}

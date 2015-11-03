@@ -14,7 +14,7 @@ body {
 }
 
 .menus {
-	@include position(absolute, 0,0,0,0);
+	@include position(relative, 0,0,0,0);
 	list-style: none;
 	li {
 		display: block;
@@ -61,6 +61,11 @@ body {
 			.item {
 				background-repeat: repeat-x repeat-y;
 				width: 100%;
+				&.withBG {
+					.menus {
+						@include position(absolute, 0,0,0,0);
+					}
+				}
 			}
 		}
 	}

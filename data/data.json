@@ -2,11 +2,11 @@
 	"playLength": "5000",
 	"menus" : [
 		{
-			"background" : "cups.jpg",
+			"background" : "",
 			"startDate" : "2015-11-02",
 			"endDate" : "2015-11-18",
-			"startTime" : "10:15:35",
-			"endTime" : "19:50:45",
+			"startTime" : "07:15:35",
+			"endTime" : "22:50:45",
 			"menuList" : [
 				{
 					"type" : "title",
@@ -21,15 +21,169 @@
 					"description" : "pa hogung",
 					"priceLarge" :"35:-",
 					"priceSmall" :"20:-"
+				},
+				{
+					"type" : "item",
+					"name" : "Choklad",
+					"description" : "pa hogung",
+					"priceLarge" :"74:-",
+					"priceSmall" :"57:-"
+				},
+				{
+					"type" : "item",
+					"name" : "Black Tea",
+					"description" : "skdjgfhkjsdhf",
+					"priceLarge" :"125:-",
+					"priceSmall" :"68:-"
+				},
+				{
+					"type" : "item",
+					"name" : "Cappuccino",
+					"description" : "lak  kajdhg kjahd  kajdhg fkjh",
+					"priceLarge" :"46:-",
+					"priceSmall" :"39:-"
+				},
+				{
+					"type" : "item",
+					"name" : "Caffe Latte",
+					"description" : "lladkfhg kj  akdjfhg kjahd f k",
+					"priceLarge" :"91:-",
+					"priceSmall" :"52:-"
+				},
+				{
+					"type" : "title",
+					"name" : "Varma Drykker",
+					"description" : "pa vanilj",
+					"priceLarge" : "26:-", 
+					"priceSmall" : "18:-"
+				},
+				{
+					"type" : "item",
+					"name" : "Te Grona",
+					"description" : "pa hogung",
+					"priceLarge" :"35:-",
+					"priceSmall" :"20:-"
+				},
+				{
+					"type" : "item",
+					"name" : "Choklad",
+					"description" : "pa hogung",
+					"priceLarge" :"35:-",
+					"priceSmall" :"20:-"
+				},
+				{
+					"type" : "item",
+					"name" : "Black Tea",
+					"description" : "skdjgfhkjsdhf",
+					"priceLarge" :"35:-",
+					"priceSmall" :"20:-"
+				},
+				{
+					"type" : "item",
+					"name" : "Cappuccino",
+					"description" : "lak  kajdhg kjahd  kajdhg fkjh",
+					"priceLarge" :"35:-",
+					"priceSmall" :"20:-"
+				},
+				{
+					"type" : "item",
+					"name" : "Caffe Latte",
+					"description" : "lladkfhg kj  akdjfhg kjahd f k",
+					"priceLarge" :"35:-",
+					"priceSmall" :"20:-"
+				},
+				{
+					"type" : "title",
+					"name" : "Varma Drykker",
+					"description" : "pa vanilj",
+					"priceLarge" : "26:-", 
+					"priceSmall" : "18:-"
+				},
+				{
+					"type" : "item",
+					"name" : "Te Grona",
+					"description" : "pa hogung",
+					"priceLarge" :"35:-",
+					"priceSmall" :"20:-"
+				},
+				{
+					"type" : "item",
+					"name" : "Choklad",
+					"description" : "pa hogung",
+					"priceLarge" :"35:-",
+					"priceSmall" :"20:-"
+				},
+				{
+					"type" : "item",
+					"name" : "Black Tea",
+					"description" : "skdjgfhkjsdhf",
+					"priceLarge" :"35:-",
+					"priceSmall" :"20:-"
+				},
+				{
+					"type" : "item",
+					"name" : "Cappuccino",
+					"description" : "lak  kajdhg kjahd  kajdhg fkjh",
+					"priceLarge" :"78:-",
+					"priceSmall" :"36:-"
+				},
+				{
+					"type" : "item",
+					"name" : "Caffe Latte",
+					"description" : "lladkfhg kj  akdjfhg kjahd f k",
+					"priceLarge" :"35:-",
+					"priceSmall" :"17:-"
+				},
+				{
+					"type" : "title",
+					"name" : "Varma Drykker",
+					"description" : "pa vanilj",
+					"priceLarge" : "59:-", 
+					"priceSmall" : "18:-"
+				},
+				{
+					"type" : "item",
+					"name" : "Te Grona",
+					"description" : "1234567890",
+					"priceLarge" :"35:-",
+					"priceSmall" :"20:-"
+				},
+				{
+					"type" : "item",
+					"name" : "Choklad",
+					"description" : "pa hogung",
+					"priceLarge" :"35:-",
+					"priceSmall" :"20:-"
+				},
+				{
+					"type" : "item",
+					"name" : "Black Tea",
+					"description" : "skdjgfhkjsdhf",
+					"priceLarge" :"35:-",
+					"priceSmall" :"45:-"
+				},
+				{
+					"type" : "item",
+					"name" : "Cappuccino",
+					"description" : "lak  kajdhg kjahd  kajdhg fkjh",
+					"priceLarge" :"35:-",
+					"priceSmall" :"54:-"
+				},
+				{
+					"type" : "item",
+					"name" : "Caffe Latte",
+					"description" : "lladkfhg kj  akdjfhg kjahd f k",
+					"priceLarge" :"35:-",
+					"priceSmall" :"63:-"
 				}
 			]
 		},
 		{
-			"background" : "water.jpg",
+			"background" : "largeImage1.jpg",
 			"startDate" : "2015-11-02",
 			"endDate" : "2015-11-18",
-			"startTime" : "10:15:35",
-			"endTime" : "19:50:45",
+			"startTime" : "",
+			"endTime" : "22:50:45",
 			"menuList" : [
 				{
 					"type" : "title",
@@ -48,27 +202,14 @@
 			]
 		},
 		{
-			"background" : "",
+			"background" : "byGeorgy.jpg",
 			"startDate" : "2015-11-02",
 			"endDate" : "2015-11-18",
-			"startTime" : "10:15:35",
-			"endTime" : "19:50:45",
+			"startTime" : "",
+			"endTime" : "22:50:45",
 			"menuList" : [
-				{
-					"type" : "title",
-					"name" : "Varma Drykker",
-					"description" : "pa vanilj",
-					"priceLarge" : "26:-", 
-					"priceSmall" : "18:-"
-				},
-				{
-					"type" : "item",
-					"name" : "Te Grona",
-					"description" : "pa hogung",
-					"priceLarge" :"35:-",
-					"priceSmall" :"20:-"
-				}
+				
 			]
-		}
+		}		
 	]
 }

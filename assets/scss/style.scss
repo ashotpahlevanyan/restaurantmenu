@@ -1,3 +1,16 @@
+@import "fonts";
+
+/// Font Sizes parameters
+$small: 25px;
+$normal: 30px;
+$large: 35px;
+$extra: 40px;
+$huge: 50px;
+//@include font-face("Blooming Grove", font-files("examples/bgrove.ttf", "examples/bgrove.otf"));
+
+%fontArcher {
+	font-family: "Archer-Book", Helvetica, Arial, sans-serif;  
+}
 @mixin position($position: absolute, $top: auto, $right: auto, $bottom: auto, $left: auto) {
 	position: $position;
 	top: $top;
@@ -9,49 +22,11 @@
 body {
 	//background-color: green;
 	position: relative;
-	background: url(../images/bg.jpg);
+	background: url(../images/122.jpg);
 	background-repeat: repeat-x repeat-y;
+	@extend %fontArcher;
 }
 
-.menus {
-	@include position(relative, 0,0,0,0);
-	list-style: none;
-	li {
-		display: block;
-	}
-	* {
-		color: white !important;
-	}
-}
-
-///////// OK Part above
-.imgContainer {
-	@include position(relative, 0, 0, 0, 0);
-	.bgImage {
-		display: block;
-		width: 100%;
-		height: auto;
-		z-index: 10;
-	}
-}
-
-.menu {
-	// position: absolute;
-	// top: 0;
-	// left: 0;
-	// right: 0;
-	// bottom: 0;
-	// z-index: 500;
-}
-//<img alt="img" src="http://dummyimage.com/1200x1800/a49bd5/9bd5a4">
-//<img alt="img" src="http://dummyimage.com/1200x1800/b49da5/9bd5a4">
-//<img alt="img" src="http://dummyimage.com/1200x1800/a4e5d5/9bd5a4">
-// FONTS
-//palatino, PT Serif Caption
-//adobe devangari
-//adobe hebrew
-//adobe gumuhi
-//arabic typesetting
 .container {
 	&.myCarousel {
 		width: auto;
@@ -59,55 +34,91 @@ body {
 		padding: 0;
 		.carousel-inner {
 			.item {
-				background-repeat: repeat-x repeat-y;
+				//background-repeat: repeat-x repeat-y;
 				width: 100%;
-				&.withBG {
-					.menus {
-						@include position(absolute, 0,0,0,0);
-					}
-				}
 			}
 		}
 	}
 }
 
-.title {
-	padding: 0 15px;
-	font-style: italic;
-	font-style: 25px;
-}
-.itemsList {
-	display: block;
-	list-style: none;
-	font-size: 0;
-	padding: 5px 15px;
-	li {
-		font-size: 18px;
-		display: block;
+.item {
+	&.withBG {
+		.imageContainer {
+			@include position(relative, 0, 0, 0, 0);
+			.bgImage {
+				display: block;
+				width: 100%;
+				height: 100%;
+				z-index: 10;
+			}
+		}
+		.menus {
+			@include position(absolute, 0,0,0,0);
+		}
+	}
+	
+	.menus {
+		@include position(relative, 0,0,0,0);
+		list-style: none;
+		font-size: 0;
+		padding-left: 0;
 		span {
+			@extend %fontArcher;
+			font-size: $small;
+			font-weight: 400;
+			font-style: italic;
+			padding: 5px 15px;
+			color: black;
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 1%;
 			&:first-child {
 				margin-left: 0;
 			}
+		}
+		li {
+			font-size: $small;
 			display: block;
-			color: black;
-			display: inline-block;
-			vertical-align: top;
-			font-style: italic;
-			margin-left: 3%;
-
-		}
-		.name {
-			width: 30%;
-		}
-		.description {
-			width: 50%;
-		}
-		.price {
-			width: 10%;
-			&:after {
-				content:":-";
+			.name {
+				width: 30%;
+				font-size: $normal;
 			}
-			text-align: right;
+			.description {
+				width: 50%;
+				font-size: $small;
+			}
+			.price {
+				text-align: left;
+				font-size: $normal;
+				&.large {
+					width: 8%;
+					font-size: $large;
+				}
+				&.small {
+					width: 6%;
+				}
+			}
+		}
+		.title {
+			font-style: italic;
+			font-size: $extra;
+			margin-top: 40px;
+			&:first-child {
+				margin-top: 30px;
+			}
+			span {
+				font-size: $extra;
+				&.price {
+					&.large {
+						font-size: $extra;
+					}
+				}
+			}
+			.description {
+				font-size: $normal;
+			}
 		}
 	}
 }
+
+

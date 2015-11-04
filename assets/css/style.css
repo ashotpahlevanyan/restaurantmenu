@@ -1,36 +1,71 @@
+@font-face {
+  font-family: "Archer-Book";
+  src: url("../fonts/Archer-Book.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Archer-Book";
+  src: url("../fonts/Archer-BookItalic.otf") format("opentype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Archer-Book";
+  src: url("../fonts/Archer-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Archer-Book";
+  src: url("../fonts/Archer-BoldItalic.otf") format("opentype");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Archer-Book";
+  src: url("../fonts/Archer-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Archer-Book";
+  src: url("../fonts/Archer-LightItalic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Archer-Book";
+  src: url("../fonts/Archer-ExtraLight.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Archer-Book";
+  src: url("../fonts/Archer-ExtraLightItalic.otf") format("opentype");
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Archer-Book";
+  src: url("../fonts/Archer-Hairline.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Archer-Book";
+  src: url("../fonts/Archer-HairlineItalic.otf") format("opentype");
+  font-weight: 100;
+  font-style: italic;
+}
+body, .item .menus span {
+  font-family: "Archer-Book", Helvetica, Arial, sans-serif;
+}
+
 body {
   position: relative;
-  background: url(../images/bg.jpg);
+  background: url(../images/122.jpg);
   background-repeat: repeat-x repeat-y;
-}
-
-.menus {
-  position: relative;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  list-style: none;
-}
-.menus li {
-  display: block;
-}
-.menus * {
-  color: white !important;
-}
-
-.imgContainer {
-  position: relative;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-.imgContainer .bgImage {
-  display: block;
-  width: 100%;
-  height: auto;
-  z-index: 10;
 }
 
 .container.myCarousel {
@@ -39,56 +74,91 @@ body {
   padding: 0;
 }
 .container.myCarousel .carousel-inner .item {
-  background-repeat: repeat-x repeat-y;
   width: 100%;
 }
-.container.myCarousel .carousel-inner .item.withBG .menus {
+
+.item.withBG .imageContainer {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.item.withBG .imageContainer .bgImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.item.withBG .menus {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
 }
-
-.title {
-  padding: 0 15px;
-  font-style: italic;
-  font-style: 25px;
-}
-
-.itemsList {
-  display: block;
+.item .menus {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   list-style: none;
   font-size: 0;
+  padding-left: 0;
+}
+.item .menus span {
+  font-size: 25px;
+  font-weight: 400;
+  font-style: italic;
   padding: 5px 15px;
-}
-.itemsList li {
-  font-size: 18px;
-  display: block;
-}
-.itemsList li span {
-  display: block;
   color: black;
   display: inline-block;
-  vertical-align: top;
-  font-style: italic;
-  margin-left: 3%;
+  vertical-align: middle;
+  margin-left: 1%;
 }
-.itemsList li span:first-child {
+.item .menus span:first-child {
   margin-left: 0;
 }
-.itemsList li .name {
+.item .menus li {
+  font-size: 25px;
+  display: block;
+}
+.item .menus li .name {
   width: 30%;
+  font-size: 30px;
 }
-.itemsList li .description {
+.item .menus li .description {
   width: 50%;
+  font-size: 25px;
 }
-.itemsList li .price {
-  width: 10%;
-  text-align: right;
+.item .menus li .price {
+  text-align: left;
+  font-size: 30px;
 }
-.itemsList li .price:after {
-  content: ":-";
+.item .menus li .price.large {
+  width: 8%;
+  font-size: 35px;
+}
+.item .menus li .price.small {
+  width: 6%;
+}
+.item .menus .title {
+  font-style: italic;
+  font-size: 40px;
+  margin-top: 40px;
+}
+.item .menus .title:first-child {
+  margin-top: 30px;
+}
+.item .menus .title span {
+  font-size: 40px;
+}
+.item .menus .title span.price.large {
+  font-size: 40px;
+}
+.item .menus .title .description {
+  font-size: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */
